@@ -16,6 +16,7 @@ public class Recipe {
     private String source;
     private String url;
     private String directions;
+
     // todo add
     // private Difficulty difficulty;
 
