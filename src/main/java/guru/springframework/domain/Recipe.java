@@ -135,7 +135,7 @@ public class Recipe {
         return categories;
     }
 
-    public void setCategory(Set<Category> category) {
-        this.categories = category;
+    public void setCategory(Set<Category> categories) {
+        this.categories = categories;
     }
 }
