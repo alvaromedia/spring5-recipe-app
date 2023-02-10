@@ -29,14 +29,12 @@ public class RecipeServiceImplTest {
 
     @Test
     public void getRecipes() {
-        Recipe recipe = new Recipe();
-        HashSet recipesData = new HashSet();
-        recipesData.add(recipe);
+        Set<Recipe> recipesData = new HashSet<>();
+        recipesData.add(new Recipe());
 
         when(recipeRepository.findAll()).thenReturn(recipesData);
 
-        Set<Recipe> recipes = recipeServiceImpl.getRecipes();
-        assertEquals(1, recipes.size());
+        assertEquals(1, recipeServiceImpl.getRecipes().size());
 
         verify(recipeRepository, times(1)).findAll();
     }
