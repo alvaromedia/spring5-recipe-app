@@ -23,7 +23,6 @@ public class RecipeServiceImplTest {
     @Before
     public void setUp(){
         MockitoAnnotations.initMocks(this);
-
         recipeServiceImpl = new RecipeServiceImpl(recipeRepository);
     }
 
@@ -33,9 +32,7 @@ public class RecipeServiceImplTest {
         recipesData.add(new Recipe());
 
         when(recipeRepository.findAll()).thenReturn(recipesData);
-
         assertEquals(1, recipeServiceImpl.getRecipes().size());
-
         verify(recipeRepository, times(1)).findAll();
     }
 }

@@ -19,14 +19,12 @@ public class UnitOfMeasureRepositoryIT {
     @Autowired
     UnitOfMeasureRepository unitOfMeasureRepository;
 
-
     @Before
     public void setUp() throws Exception {
     }
 
     @Test
     public void findByDescription() {
-
         Optional<UnitOfMeasure> optionalUnitOfMeasure =
                 unitOfMeasureRepository.findByDescription("Teaspoon");
 
@@ -36,7 +34,6 @@ public class UnitOfMeasureRepositoryIT {
 
     @Test
     public void findByDescription2() {
-
         Optional<UnitOfMeasure> optionalUnitOfMeasure =
                 unitOfMeasureRepository.findByDescription("Cup");
 
