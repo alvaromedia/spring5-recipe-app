@@ -32,7 +32,7 @@ public class IndexControllerTest {
     IndexController controller;
 
     @Before
-    public void setUp()  {
+    public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
 
         controller = new IndexController(recipeService);
@@ -48,7 +48,7 @@ public class IndexControllerTest {
     }
 
     @Test
-    public void getIndexPage()  {
+    public void getIndexPage() throws Exception {
 
         //given
         Set<Recipe> recipes = new HashSet<>();
@@ -65,6 +65,7 @@ public class IndexControllerTest {
 
         //when
         String viewName = controller.getIndexPage(model);
+
 
         //then
         assertEquals("index", viewName);
